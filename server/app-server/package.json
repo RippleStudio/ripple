@@ -13,6 +13,7 @@
   "author": "suyu",
   "license": "ISC",
   "dependencies": {
-    "express": "4.x"
+    "express": "4.x",
+    "mongodb": "*"
   }
 }
