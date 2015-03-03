@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_header_layout"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/profile_header"
+            layout="@layout/common_header" />
+
+        <include
+            android:id="@+id/profile_rank"
+            layout="@layout/profile_header" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/profile_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_header_layout"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_header_layout"
+        android:background="@drawable/bg_topbar_shadow"
+        android:focusable="false" />
+
+</RelativeLayout>

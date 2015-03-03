@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="162dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/bg_common_header"
+        android:gravity="center_vertical"
+        android:paddingLeft="29dp" >
+
+        <FrameLayout
+            android:id="@+id/profile_avatar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/item_list_feed_avatar"
+                android:layout_width="122dp"
+                android:layout_height="122dp"
+                android:background="@drawable/avatar" />
+
+            <ImageView
+                android:layout_width="122dp"
+                android:layout_height="122dp"
+                android:background="@drawable/bglistitem_selector_session_select"
+                android:duplicateParentState="true"
+                android:scaleType="fitXY" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/profile_reputation_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/profile_reputation_num"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/profile_reputation_num" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/reputation_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="20"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/profile_reputation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/profile_avatar_layout"
+            android:text="影响力"
+            android:textColor="#ffababab"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/profile_reputation_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_reputation_title"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/profile_avatar_layout"
+            android:text="960"
+            android:textColor="@color/white"
+            android:textSize="80px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_reputation_num"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/profile_avatar_layout"
+            android:text="一条消息可以影响1000人"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile_devider_bar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#fff4f4f4" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="最新" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center" 
+            android:background="@drawable/arrow_down"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

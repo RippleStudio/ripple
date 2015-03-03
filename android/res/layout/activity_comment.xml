@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <include 
+       	   android:id="@+id/comment_profile_header"
+           android:layout_width="match_parent"
+    	   android:layout_height="wrap_content"
+           layout="@layout/profile_header"
+       />
+
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:background="#fffc563c"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/comment_count" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="20"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content" 
+            android:background="@color/yellowish"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/people_count" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="20"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <ListView
+        android:id="@+id/comment_list"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+     />
+    
+    <LinearLayout 
+          android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/background_undercard"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:padding="4dp"
+            android:orientation="horizontal"
+        >
+        
+        <EditText 
+             android:layout_width="200dp"
+            android:layout_height="match_parent"
+             android:imeOptions="actionDone"
+             android:hint="大侠，评论下吧"
+             android:windowSoftInputMode = "adjustResize"
+            />
+        <Button 
+             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:text="发送"
+            android:background="#ffffffff"
+            />
+        
+        
+    </LinearLayout>
+
+</LinearLayout>

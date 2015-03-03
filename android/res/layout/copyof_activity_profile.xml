@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/profile_header"
+        layout="@layout/common_header" />
+
+    <top.focuson.ripple.android.view.PagerScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/profile_header"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="162dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="29dp"
+                android:background="@color/bg_common_header" >
+
+                <FrameLayout
+                    android:id="@+id/profile_avatar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" >
+
+                    <ImageView
+                        android:id="@+id/item_list_feed_avatar"
+                        android:layout_width="122dp"
+                        android:layout_height="122dp"
+                        android:background="@drawable/avatar" />
+
+                    <ImageView
+                        android:layout_width="122dp"
+                        android:layout_height="122dp"
+                        android:background="@drawable/bglistitem_selector_session_select"
+                        android:duplicateParentState="true"
+                        android:scaleType="fitXY" />
+                </FrameLayout>
+                
+                 <FrameLayout
+                    android:id="@+id/profile_reputation_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/profile_reputation_num"
+                    android:layout_alignTop="@+id/profile_reputation_num"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                        android:background="@drawable/reputation_bg" />
+
+                    <TextView 
+                         android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                         android:text="20"
+                         android:layout_gravity="center"
+                        android:textColor="@color/white"
+                       />
+                </FrameLayout>
+                
+                <TextView 
+                    android:id="@+id/profile_reputation_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="影响力"
+                    android:textColor="#ffababab"
+                    android:textSize="32px"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/profile_avatar_layout"
+                    />
+                
+                <TextView 
+                    android:id="@+id/profile_reputation_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="960"
+                    android:textColor="@color/white"
+                    android:textSize="80px"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="48dp"
+                    android:layout_below="@+id/profile_reputation_title"
+                    android:layout_toRightOf="@+id/profile_avatar_layout"
+                    />
+                
+                 
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="一条消息可以影响1000人"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="48dp"
+                    android:layout_below="@+id/profile_reputation_num"
+                    android:layout_toRightOf="@+id/profile_avatar_layout"
+                    />
+
+                <!--
+                     <top.focuson.ripple.android.view.CloudImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                -->
+            </RelativeLayout>
+
+            <include layout="@layout/include_profile_photos" />
+        </LinearLayout>
+    </top.focuson.ripple.android.view.PagerScrollView>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_header"
+        android:background="@drawable/bg_topbar_shadow"
+        android:focusable="false" />
+
+</RelativeLayout>
